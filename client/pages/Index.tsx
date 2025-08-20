@@ -16,7 +16,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-[315px] mx-auto">
+      <div className="w-full max-w-[315px] sm:max-w-[340px] md:max-w-[360px] mx-auto">
         {/* Main Card */}
         <div className="bg-gray-50 border border-black/12 rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.16)] overflow-hidden relative" style={{ width: '315px', minHeight: '523px' }}>
           {/* Header */}
