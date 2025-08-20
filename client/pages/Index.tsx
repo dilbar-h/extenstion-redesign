@@ -34,7 +34,7 @@ export default function Index() {
           {/* Content */}
           <div className="px-4 pt-4 pb-[92px] space-y-4" style={{ marginTop: '58px' }}>
             {/* Info Banner */}
-            <div className="bg-[#E7E6FA] border-2 border-[#D1CFF6] rounded-2xl px-4 py-3">
+            <div className="bg-[#E7E6FA] border-2 border-[#D1CFF6] rounded-2xl py-3 px-4">
               <p className="text-[#552C9C] text-sm leading-5 font-normal">
                 Highlight a word on any page and get instant AI powered definitions. You don't
                 need to scan the page first.
