@@ -84,39 +84,59 @@ export default function Index() {
             </div>
 
             {/* Toggle Setting */}
-            <div className="bg-white border border-[#E3E3E5] rounded-[20px] p-4 flex items-center relative">
-              <div className="w-[203px] h-10 flex items-center">
-                <span className="text-[#6C6D70] text-sm leading-5 font-normal">
-                  Always highlight difficult terms while browsing
-                </span>
-              </div>
-              <button
-                onClick={() => setIsToggleOn(!isToggleOn)}
-                className="absolute right-4 top-6"
-              >
-                <svg
-                  width="40"
-                  height="24"
-                  viewBox="0 0 40 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="transition-all duration-200"
+            <div className={`bg-white border border-[#E3E3E5] rounded-[20px] relative ${isToggleOn ? 'h-[148px]' : 'h-[148px]'}`}>
+              {/* Toggle Section */}
+              <div className="p-4 flex items-center relative">
+                <div className="w-[203px] h-10 flex items-center">
+                  <span className="text-[#6C6D70] text-sm leading-5 font-normal">
+                    Always highlight difficult terms while browsing
+                  </span>
+                </div>
+                <button
+                  onClick={() => setIsToggleOn(!isToggleOn)}
+                  className="absolute right-4 top-6"
                 >
-                  <rect
+                  <svg
                     width="40"
                     height="24"
-                    rx="12"
-                    fill={isToggleOn ? '#905FFC' : '#DCDCDC'}
-                  />
-                  <circle
-                    cx={isToggleOn ? '28' : '12'}
-                    cy="12"
-                    r="9"
-                    fill="white"
+                    viewBox="0 0 40 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                     className="transition-all duration-200"
-                  />
-                </svg>
-              </button>
+                  >
+                    <rect
+                      width="40"
+                      height="24"
+                      rx="12"
+                      fill={isToggleOn ? '#5046E4' : '#DCDCDC'}
+                    />
+                    <circle
+                      cx={isToggleOn ? '28' : '12'}
+                      cy="12"
+                      r="9"
+                      fill="white"
+                      className="transition-all duration-200"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Status Banner */}
+              <div className="absolute left-3 top-[72px] w-[259px] h-16">
+                {isToggleOn ? (
+                  <div className="bg-[#E3F9E7] border-2 border-[#C1F4C4] rounded-2xl py-3 px-4 h-full flex items-center">
+                    <span className="text-[#176724] text-sm leading-5 font-normal">
+                      Scanner enabled. You can now scan pages and highlight terms.
+                    </span>
+                  </div>
+                ) : (
+                  <div className="bg-[#E8F6FB] border-2 border-[#C1ECF4] rounded-2xl py-3 px-4 h-full flex items-center">
+                    <span className="text-[#175667] text-sm leading-5 font-normal">
+                      Scanner disabled. No highlighting will occur.
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
