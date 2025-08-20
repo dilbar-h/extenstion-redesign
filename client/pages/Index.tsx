@@ -21,10 +21,11 @@ export default function Index() {
         <div className="bg-gray-50 border border-black/12 rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.16)] overflow-hidden relative" style={{ width: '315px', minHeight: '523px' }}>
           {/* Header */}
           <div className="bg-white border-b border-gray-200 px-4 py-2 h-14 flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-purple-600 rounded-xl flex items-center justify-center shadow-sm relative">
-              <div className="w-4 h-4 bg-purple-600 rounded-sm absolute bottom-0.5 left-0.5" />
-              <div className="w-6 h-6 bg-teal-400 rounded-lg" />
-            </div>
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/0a1d4a864dc6b222470eb78d972ae6fa7b757e08?width=80"
+              alt="AI Term Highlighter App Icon"
+              className="w-10 h-10 aspect-square object-cover"
+            />
             <h1 className="text-gray-900 font-medium text-base flex-1">
               AI Term Highlighter
             </h1>
