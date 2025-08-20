@@ -42,21 +42,29 @@ export default function Index() {
             </div>
 
             {/* Select Domain */}
-            <div className="space-y-1.5">
-              <div className="bg-white border border-[#E3E3E5] rounded-2xl p-3">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[#6C6D70] text-xs font-normal leading-4">Select domain</span>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#222] text-base font-normal leading-6 tracking-[-0.32px]">Marketing</span>
-                    <div className="p-2">
-                      <ChevronDown className="w-6 h-6 text-[#8D8E91]" strokeWidth={1.5} />
+            <div className="space-y-0">
+              <div className="bg-white border border-[#E3E3E5] rounded-2xl py-3 pr-1 pl-4 flex flex-col gap-2.5">
+                <div className="flex items-center w-full">
+                  <div className="flex flex-col flex-1">
+                    <span className="text-[#6C6D70] text-xs font-normal leading-4 overflow-hidden text-ellipsis whitespace-nowrap">
+                      Select domain
+                    </span>
+                    <div className="flex items-center w-full">
+                      <span className="text-[#222] text-base font-normal leading-6 tracking-[-0.32px] flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                        Marketing
+                      </span>
                     </div>
+                  </div>
+                  <div className="p-2 flex items-start">
+                    <ChevronDown className="w-6 h-6 text-[#8D8E91]" strokeWidth={1.5} />
                   </div>
                 </div>
               </div>
-              <p className="text-[#6C6D70] text-xs px-4 leading-4">
-                Pick a domain so we can focus on the right terminology
-              </p>
+              <div className="pt-1.5 px-4">
+                <p className="text-[#6C6D70] text-xs leading-4">
+                  Pick a domain so we can focus on the right terminology
+                </p>
+              </div>
             </div>
 
             {/* Highlight Color */}
