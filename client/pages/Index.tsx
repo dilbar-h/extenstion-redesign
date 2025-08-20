@@ -84,21 +84,38 @@ export default function Index() {
             </div>
 
             {/* Toggle Setting */}
-            <div className="bg-white border border-[#E3E3E5] rounded-[20px] p-4 flex items-center justify-between">
-              <p className="text-[#6C6D70] text-sm leading-5 pr-4 flex-1">
-                Always highlight difficult terms while browsing
-              </p>
+            <div className="bg-white border border-[#E3E3E5] rounded-[20px] p-4 flex items-center relative">
+              <div className="w-[203px] h-10 flex items-center">
+                <span className="text-[#6C6D70] text-sm leading-5 font-normal">
+                  Always highlight difficult terms while browsing
+                </span>
+              </div>
               <button
                 onClick={() => setIsToggleOn(!isToggleOn)}
-                className={`w-10 h-6 rounded-full transition-colors flex-shrink-0 ${
-                  isToggleOn ? 'bg-ai-purple-500' : 'bg-[#DCDCDC]'
-                }`}
+                className="absolute right-4 top-6"
               >
-                <div
-                  className={`w-[18px] h-[18px] bg-white rounded-full transition-transform ${
-                    isToggleOn ? 'translate-x-[19px]' : 'translate-x-[3px]'
-                  } mt-[3px]`}
-                />
+                <svg
+                  width="40"
+                  height="24"
+                  viewBox="0 0 40 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="transition-all duration-200"
+                >
+                  <rect
+                    width="40"
+                    height="24"
+                    rx="12"
+                    fill={isToggleOn ? '#905FFC' : '#DCDCDC'}
+                  />
+                  <circle
+                    cx={isToggleOn ? '28' : '12'}
+                    cy="12"
+                    r="9"
+                    fill="white"
+                    className="transition-all duration-200"
+                  />
+                </svg>
               </button>
             </div>
           </div>
