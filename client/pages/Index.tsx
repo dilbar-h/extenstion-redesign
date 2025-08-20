@@ -18,9 +18,9 @@ export default function Index() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="w-full max-w-[315px] sm:max-w-[340px] md:max-w-[360px] mx-auto">
         {/* Main Card */}
-        <div className="bg-gray-50 border border-black/12 rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.16)] overflow-hidden relative" style={{ width: '315px', minHeight: '523px' }}>
+        <div className="bg-gray-50 border border-black/12 rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.16)] overflow-hidden relative flex flex-col" style={{ width: '315px', height: '523px' }}>
           {/* Header */}
-          <div className="bg-white border-b border-gray-200 px-4 py-2 h-14 flex items-center gap-3">
+          <div className="bg-white border-b border-gray-200 px-4 py-2 h-14 flex items-center gap-3 flex-shrink-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/0a1d4a864dc6b222470eb78d972ae6fa7b757e08?width=80"
               alt="AI Term Highlighter App Icon"
