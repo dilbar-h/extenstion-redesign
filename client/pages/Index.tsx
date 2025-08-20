@@ -165,7 +165,7 @@ export default function Index() {
           </div>
 
           {/* Bottom Button */}
-          <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-[#E3E3E5] p-4 h-[76px] flex items-center">
+          <div className="bg-white border-t border-[#E3E3E5] p-4 h-[76px] flex items-center flex-shrink-0">
             <button
               disabled={!isToggleOn}
               className={`w-full h-12 bg-[#5046E4] text-white font-semibold text-base rounded-[60px] transition-all leading-6 ${!isToggleOn ? 'opacity-40 cursor-not-allowed' : 'hover:bg-[#5046E4]/90 cursor-pointer'}`}
