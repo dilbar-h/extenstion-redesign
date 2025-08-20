@@ -84,10 +84,22 @@ export default function Index() {
                     {selectedColor === color.name && (
                       <>
                         <div
-                          className="absolute -inset-1 rounded-full border-2"
+                          className="absolute -inset-1 rounded-full border-2 flex-shrink-0"
                           style={{ borderColor: color.color }}
                         />
-                        <Check className="w-6 h-6 text-white" strokeWidth={2} />
+                        <svg
+                          className="absolute left-1 top-1 w-6 h-6 flex-shrink-0"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.2573 17.2929C9.86679 17.6834 9.23362 17.6834 8.8431 17.2929L4.56271 13.0125C4.1692 12.619 4.1692 11.981 4.56271 11.5875C4.95621 11.194 5.5942 11.194 5.98771 11.5875L9.55021 15.15L18.0127 6.68752C18.4062 6.29402 19.0442 6.29402 19.4377 6.68752C19.8312 7.08102 19.8312 7.71902 19.4377 8.11252L10.2573 17.2929Z"
+                            fill="white"
+                          />
+                        </svg>
                       </>
                     )}
                   </button>
