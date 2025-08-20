@@ -44,10 +44,13 @@ export default function Index() {
             {/* Select Domain */}
             <div className="space-y-1.5">
               <div className="bg-white border border-[#E3E3E5] rounded-2xl p-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-[#6C6D70] text-base font-normal leading-6 tracking-[-0.32px]">Select domain</span>
-                  <div className="p-2">
-                    <ChevronDown className="w-6 h-6 text-[#8D8E91]" strokeWidth={1.5} />
+                <div className="flex flex-col gap-1">
+                  <span className="text-[#6C6D70] text-xs font-normal leading-4">Select domain</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#222] text-base font-normal leading-6 tracking-[-0.32px]">Marketing</span>
+                    <div className="p-2">
+                      <ChevronDown className="w-6 h-6 text-[#8D8E91]" strokeWidth={1.5} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -57,7 +60,7 @@ export default function Index() {
             </div>
 
             {/* Highlight Color */}
-            <div className="bg-white border border-[#E3E3E5] rounded-[20px] p-4 relative">
+            <div className={`bg-white border border-[#E3E3E5] rounded-[20px] p-4 relative transition-opacity duration-200 ${!isToggleOn ? 'opacity-40' : ''}`}>
               <h3 className="text-[#222] font-medium text-sm mb-3.5 leading-5">
                 Highlight color
               </h3>
@@ -65,8 +68,9 @@ export default function Index() {
                 {highlightColors.map((color) => (
                   <button
                     key={color.name}
-                    onClick={() => setSelectedColor(color.name)}
-                    className="relative w-8 h-8 rounded-full flex items-center justify-center"
+                    onClick={() => isToggleOn && setSelectedColor(color.name)}
+                    disabled={!isToggleOn}
+                    className="relative w-8 h-8 rounded-full flex items-center justify-center cursor-pointer disabled:cursor-not-allowed"
                     style={{ backgroundColor: color.color }}
                   >
                     {selectedColor === color.name && (
@@ -142,7 +146,10 @@ export default function Index() {
 
           {/* Bottom Button */}
           <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-[#E3E3E5] p-4 h-[76px] flex items-center">
-            <button className="w-full h-12 bg-[#5046E4] text-white font-semibold text-base rounded-[60px] hover:bg-[#5046E4]/90 transition-colors leading-6">
+            <button
+              disabled={!isToggleOn}
+              className={`w-full h-12 bg-[#5046E4] text-white font-semibold text-base rounded-[60px] transition-all leading-6 ${!isToggleOn ? 'opacity-40 cursor-not-allowed' : 'hover:bg-[#5046E4]/90 cursor-pointer'}`}
+            >
               Scan page
             </button>
           </div>
