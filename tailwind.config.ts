@@ -57,6 +57,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // AI Term Highlighter custom colors
+        'ai-purple': {
+          50: '#F7F5FF',
+          100: '#E7E6FA',
+          200: '#D1CFF6',
+          500: '#905FFC',
+          600: '#552C9C',
+          700: '#5046E4',
+        },
+        'highlight': {
+          yellow: '#FBBE25',
+          orange: '#FB933E',
+          blue: '#3C81F6',
+          green: '#13B981',
+          pink: '#EE4799',
+          purple: '#905FFC',
+        },
+        'gray': {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E3E3E5',
+          400: '#8D8E91',
+          500: '#6C6D70',
+          900: '#222222',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
