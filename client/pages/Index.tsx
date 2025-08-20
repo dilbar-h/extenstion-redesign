@@ -32,7 +32,7 @@ export default function Index() {
           </div>
 
           {/* Content */}
-          <div className="px-4 pt-4 pb-[92px] space-y-4" style={{ marginTop: '58px' }}>
+          <div className="px-4 pt-4 pb-[92px] space-y-4">
             {/* Info Banner */}
             <div className="bg-[#E7E6FA] border-2 border-[#D1CFF6] rounded-2xl py-3 px-4">
               <p className="text-[#552C9C] text-sm leading-5 font-normal">
