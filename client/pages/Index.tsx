@@ -18,11 +18,14 @@ export default function Index() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="w-full max-w-[315px] sm:max-w-[340px] md:max-w-[360px] mx-auto">
         {/* Main Card */}
-        <div className="bg-gray-50 border border-black/12 rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.16)] overflow-hidden relative flex flex-col" style={{ width: '315px', height: '523px' }}>
+        <div
+          className="bg-gray-50 border border-black/12 rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.16)] overflow-hidden relative flex flex-col"
+          style={{ width: "315px", height: "523px" }}
+        >
           {/* Header */}
           <div className="bg-white border-b border-gray-200 px-4 py-2 h-14 flex items-center gap-3 flex-shrink-0">
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/0a1d4a864dc6b222470eb78d972ae6fa7b757e08?width=80" 
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/0a1d4a864dc6b222470eb78d972ae6fa7b757e08?width=80"
               alt="AI Term Highlighter App Icon"
               className="w-10 h-10 aspect-square object-cover"
             />
@@ -37,8 +40,8 @@ export default function Index() {
               {/* Info Banner */}
               <div className="bg-[#E7E6FA] border-2 border-[#D1CFF6] rounded-2xl py-3 px-4">
                 <p className="text-[#552C9C] text-sm leading-5 font-normal">
-                  Highlight a word on any page and get instant AI powered definitions. You don't
-                  need to scan the page first.
+                  Highlight a word on any page and get instant AI powered
+                  definitions. You don't need to scan the page first.
                 </p>
               </div>
 
@@ -57,7 +60,10 @@ export default function Index() {
                       </div>
                     </div>
                     <div className="p-2 flex items-start">
-                      <ChevronDown className="w-6 h-6 text-[#8D8E91]" strokeWidth={1.5} />
+                      <ChevronDown
+                        className="w-6 h-6 text-[#8D8E91]"
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
                 </div>
@@ -69,7 +75,9 @@ export default function Index() {
               </div>
 
               {/* Highlight Color */}
-              <div className={`bg-white border border-[#E3E3E5] rounded-[20px] p-4 relative transition-opacity duration-200 ${!isToggleOn ? 'opacity-40' : ''}`}>
+              <div
+                className={`bg-white border border-[#E3E3E5] rounded-[20px] p-4 relative transition-opacity duration-200 ${!isToggleOn ? "opacity-40" : ""}`}
+              >
                 <h3 className="text-[#222] font-medium text-sm mb-3.5 leading-5">
                   Highlight color
                 </h3>
@@ -109,7 +117,9 @@ export default function Index() {
               </div>
 
               {/* Toggle Setting */}
-              <div className={`bg-white border border-[#E3E3E5] rounded-[20px] relative ${isToggleOn ? 'h-[148px]' : 'h-[148px]'}`}>
+              <div
+                className={`bg-white border border-[#E3E3E5] rounded-[20px] relative ${isToggleOn ? "h-[148px]" : "h-[148px]"}`}
+              >
                 {/* Toggle Section */}
                 <div className="p-4 flex items-center relative">
                   <div className="w-[203px] h-10 flex items-center">
@@ -133,10 +143,10 @@ export default function Index() {
                         width="40"
                         height="24"
                         rx="12"
-                        fill={isToggleOn ? '#5046E4' : '#DCDCDC'}
+                        fill={isToggleOn ? "#5046E4" : "#DCDCDC"}
                       />
                       <circle
-                        cx={isToggleOn ? '28' : '12'}
+                        cx={isToggleOn ? "28" : "12"}
                         cy="12"
                         r="9"
                         fill="white"
@@ -145,13 +155,14 @@ export default function Index() {
                     </svg>
                   </button>
                 </div>
-                
+
                 {/* Status Banner */}
                 <div className="absolute left-3 top-[72px] w-[259px] h-16">
                   {isToggleOn ? (
                     <div className="bg-[#E3F9E7] border-2 border-[#C1F4C4] rounded-2xl py-3 px-4 h-full flex items-center">
                       <span className="text-[#176724] text-sm leading-5 font-normal">
-                        Scanner enabled. You can now scan pages and highlight terms.
+                        Scanner enabled. You can now scan pages and highlight
+                        terms.
                       </span>
                     </div>
                   ) : (
@@ -168,9 +179,9 @@ export default function Index() {
 
           {/* Bottom Button */}
           <div className="bg-white border-t border-[#E3E3E5] p-4 h-[76px] flex items-center flex-shrink-0">
-            <button 
+            <button
               disabled={!isToggleOn}
-              className={`w-full h-12 bg-[#5046E4] text-white font-semibold text-base rounded-[60px] transition-all leading-6 ${!isToggleOn ? 'opacity-40 cursor-not-allowed' : 'hover:bg-[#5046E4]/90 cursor-pointer'}`}
+              className={`w-full h-12 bg-[#5046E4] text-white font-semibold text-base rounded-[60px] transition-all leading-6 ${!isToggleOn ? "opacity-40 cursor-not-allowed" : "hover:bg-[#5046E4]/90 cursor-pointer"}`}
             >
               Scan page
             </button>
